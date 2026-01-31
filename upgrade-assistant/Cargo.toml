@@ -1,0 +1,20 @@
+[package]
+name = "upgrade-assistant"
+version = "0.1.0"
+edition = "2021"
+description = "A stable delegate that helps other delegates upgrade gracefully by tracking delegate key mappings"
+license = "LGPL-3.0-only"
+repository = "https://github.com/freenet/freenet-delegates"
+
+[features]
+default = ["freenet-main-delegate"]
+freenet-main-delegate = []
+
+[dependencies]
+ciborium.workspace = true
+freenet-stdlib.workspace = true
+bs58.workspace = true
+serde.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
